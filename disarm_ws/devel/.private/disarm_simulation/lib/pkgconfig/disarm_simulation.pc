@@ -1,0 +1,8 @@
+prefix=/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation
+
+Name: disarm_simulation
+Description: Description of disarm_simulation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
