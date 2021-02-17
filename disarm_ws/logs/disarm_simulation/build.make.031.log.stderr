@@ -1,0 +1,4 @@
+make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4RayPlugin', needed by '/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libdisarm_plugin.so'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:240: CMakeFiles/disarm_plugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

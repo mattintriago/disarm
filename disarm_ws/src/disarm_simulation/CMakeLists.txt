@@ -2,14 +2,19 @@ cmake_minimum_required(VERSION 3.0.2)
 project(disarm_simulation)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  rospy
+  roscpp
+  gazebo_ros
+  sensor_msgs
+  xacro
 )
+find_package(gazebo REQUIRED)
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -105,23 +110,39 @@ catkin_package(
 #  LIBRARIES disarm_simulation
 #  CATKIN_DEPENDS rospy
 #  DEPENDS system_lib
+	DEPENDS
+	roscpp
+	gazebo_ros
 )
-
 ###########
 ## Build ##
 ###########
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
+
+link_directories(
+	${GAZEBO_LIBRARY_DIRS}
+)
+
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${roscpp_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/disarm_simulation.cpp
 # )
+
+add_library(disarm_plugin plugins/disarm_plugin.cc)
+target_link_libraries(disarm_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
+
+add_library(mysensor_plugin plugins/sensor_plugin.cc)
+target_link_libraries(mysensor_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries

@@ -1,5 +1,8 @@
 disarm_simulation
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/cmake.lock /home/matt/disarm/disarm_ws/devel/./cmake.lock
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libdisarm_plugin.so /home/matt/disarm/disarm_ws/devel/lib/libdisarm_plugin.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libsensor_plugin.so /home/matt/disarm/disarm_ws/devel/lib/libsensor_plugin.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so /home/matt/disarm/disarm_ws/devel/lib/libmysensor_plugin.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/pkgconfig/disarm_simulation.pc /home/matt/disarm/disarm_ws/devel/lib/pkgconfig/disarm_simulation.pc
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/share/disarm_simulation/cmake/disarm_simulationConfig.cmake /home/matt/disarm/disarm_ws/devel/share/disarm_simulation/cmake/disarm_simulationConfig.cmake
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/share/disarm_simulation/cmake/disarm_simulationConfig-version.cmake /home/matt/disarm/disarm_ws/devel/share/disarm_simulation/cmake/disarm_simulationConfig-version.cmake

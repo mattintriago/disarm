@@ -1,0 +1,7 @@
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/disarm_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::DisarmPlugin::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/disarm_plugin.cc:51:96:[m[K [01;31m[Kerror: [m[K‘[01m[KonUpdate[m[K’ is not a member of ‘[01m[Kgazebo::DisarmPlugin[m[K’
+   51 |     this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&DisarmPlugin::[01;31m[KonUpdate[m[K, this, _1));
+      |                                                                                                [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/disarm_plugin.dir/build.make:63: CMakeFiles/disarm_plugin.dir/plugins/disarm_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:207: CMakeFiles/disarm_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

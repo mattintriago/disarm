@@ -19,8 +19,8 @@
     <arg name="headless" value="$(arg headless)"/>
     <!-- arg name="world_name" value="$(find task_1)/world/tutorial_testing.world"/ -->
     </include>
-		
-    <param name="robot_description" command="cat '$(find disarm_simulation)/urdf/DISARM.urdf'" />
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find disarm_simulation)/urdf/DISARM.urdf'"/>
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model DISARM" />
+	
+    
+    <param name="robot_description" command="$(find xacro)/xacro '$(find disarm_simulation)/urdf/disarm.xacro'"/>
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model disarm" />
   </launch>

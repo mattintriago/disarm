@@ -1,0 +1,12 @@
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::MySensorPlugin::Load(gazebo::sensors::SensorPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:49:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::World[m[K’ has no member named ‘[01m[KGetModel[m[K’
+   49 |        physics::ModelPtr _m = _w->[01;31m[KGetModel[m[K(modelName.c_str());
+      |                                   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::MySensorPlugin::OnNewLaserScans()[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:59:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KGetWorldPose[m[K’; did you mean ‘[01m[KSetWorldPose[m[K’?
+   59 |      double yaw = _sensor->Pose().Rot().Yaw() + _l->[01;31m[KGetWorldPose[m[K().rot.GetYaw();
+      |                                                     [01;31m[K^~~~~~~~~~~~[m[K
+      |                                                     [32m[KSetWorldPose[m[K
+make[2]: *** [CMakeFiles/mysensor_plugin.dir/build.make:63: CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:211: CMakeFiles/mysensor_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

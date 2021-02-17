@@ -1,0 +1,20 @@
+In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:36[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:5[m[K:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In function ‘[01m[Kgazebo::ModelPlugin* gazebo::RegisterPlugin()[m[K’:
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:423:26:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[Kgazebo::ModelPlugin[m[K’
+  423 |     return new classname([01;31m[K)[m[K;\
+      |                          [01;31m[K^[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:40:2:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGZ_REGISTER_MODEL_PLUGIN[m[K’
+   40 |  [01;36m[KGZ_REGISTER_MODEL_PLUGIN[m[K(ModelPlugin)
+      |  [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:303:9:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[Kgazebo::ModelPlugin[m[K’:
+  303 |   class [01;36m[KModelPlugin[m[K : public PluginT<ModelPlugin>
+      |         [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:318:26:[m[K [01;36m[Knote: [m[K	‘[01m[Kvirtual void gazebo::ModelPlugin::Load(gazebo::physics::ModelPtr, sdf::v9::ElementPtr)[m[K’
+  318 |     public: virtual void [01;36m[KLoad[m[K(physics::ModelPtr _model,
+      |                          [01;36m[K^~~~[m[K
+make[2]: *** [CMakeFiles/sensor_plugin.dir/build.make:63: CMakeFiles/sensor_plugin.dir/plugins/sensor_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:207: CMakeFiles/sensor_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,60 @@
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::MySensorPlugin::Load(gazebo::sensors::SensorPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:49:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::World[m[K’ has no member named ‘[01m[KGetModel[m[K’
+   49 |        physics::ModelPtr _m = _w->[01;31m[KGetModel[m[K(modelName.c_str());
+      |                                   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::MySensorPlugin::OnNewLaserScans()[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:59:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KGetRelativePose[m[K’; did you mean ‘[01m[KSetRelativePose[m[K’?
+   59 |      double yaw = _sensor->Pose().Rot().Yaw() + _l->[01;31m[KGetRelativePose[m[K().rot.GetYaw();
+      |                                                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                     [32m[KSetRelativePose[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:14[m[K:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:72:16:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 8 has type ‘[01m[Kdouble[m[K’ [[01;35m[K-Wformat=[m[K]
+   72 |       ROS_INFO([01;35m[K"%s"[m[K, [32m[Kyaw[m[K, out.c_str());
+      |                [01;35m[K^~~~[m[K  [32m[K~~~[m[K
+      |                      [32m[K|[m[K
+      |                      [32m[Kdouble[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:72:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   72 |       [01;36m[KROS_INFO[m[K("%s", yaw, out.c_str());
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:72:18:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   72 |       ROS_INFO("[01;36m[K%s[m[K", yaw, out.c_str());
+      |                 [01;36m[K~^[m[K
+      |                  [01;36m[K|[m[K
+      |                  [01;36m[Kchar*[m[K
+      |                 [32m[K%f[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:14[m[K:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:72:16:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K-Wformat-extra-args[m[K]
+   72 |       ROS_INFO([01;35m[K"%s"[m[K, yaw, out.c_str());
+      |                [01;35m[K^~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:72:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   72 |       [01;36m[KROS_INFO[m[K("%s", yaw, out.c_str());
+      |       [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/mysensor_plugin.dir/build.make:63: CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/mysensor_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

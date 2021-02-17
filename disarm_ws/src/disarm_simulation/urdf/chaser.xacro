@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="chaser">
+
+<xacro:property name="body_height" value="0.125" />
+<xacro:property name="body_width" value="0.35" />
+<xacro:property name="body_length" value="0.35" />
+
+<gazebo reference="chaser_body">
+    <material>Gazebo/DarkGrey</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+</gazebo>
+
+<link name="chaser_body">
+    <visual>
+      <geometry>
+        <box size="${body_length} ${body_width} ${body_height}"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="${body_length} ${body_width} ${body_height}"/>
+      </geometry> 
+    </collision>
+
+    <inertial>
+      <mass value="0.18"/>
+      <inertia ixx="6.0e-4" ixy="0" ixz="0" iyy="6.0e-4" iyz="0" izz="6.0e-4"/>
+    </inertial>
+</link>
+</robot>

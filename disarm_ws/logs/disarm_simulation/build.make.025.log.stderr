@@ -1,0 +1,261 @@
+make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4RayPlugin', needed by '/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libdisarm_plugin.so'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:236: CMakeFiles/disarm_plugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/usr/include/ignition/math6/ignition/math/Spline.hh:22[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Animation.hh:22[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:5[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:5[m[K:
+[01m[K/usr/include/ignition/math6/ignition/math/Helpers.hh:37:13:[m[K [01;35m[Kwarning: [m[Kvariable templates only available with ‘[01m[K-std=c++14[m[K’ or ‘[01m[K-std=gnu++14[m[K’
+   37 | constexpr T [01;35m[KIGN_MASSMATRIX3_DEFAULT_TOLERANCE[m[K = T(10);
+      |             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/sdformat-9.2/sdf/Element.hh:28[m[K,
+                 from [01m[K/usr/include/sdformat-9.2/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.2/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:5[m[K:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:72:57:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K;[m[K’ token
+   72 |   template<class T> ParamStreamer(T) -> ParamStreamer<T>[01;31m[K;[m[K
+      |                                                         [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ is not a member of ‘[01m[Kstd[m[K’
+   83 |                            ParamStreamer<std::[01;31m[Kvariant[m[K<Ts...>> sv)
+      |                                               [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:57:[m[K [01;31m[Kerror: [m[Kexpected parameter pack before ‘[01m[K...[m[K’
+   83 |                            ParamStreamer<std::variant<Ts[01;31m[K...[m[K>> sv)
+      |                                                         [01;31m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ is not a member of ‘[01m[Kstd[m[K’
+   83 |                            ParamStreamer<std::[01;31m[Kvariant[m[K<Ts...>> sv)
+      |                                               [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:57:[m[K [01;31m[Kerror: [m[Kexpected parameter pack before ‘[01m[K...[m[K’
+   83 |                            ParamStreamer<std::variant<Ts[01;31m[K...[m[K>> sv)
+      |                                                         [01;31m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:60:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   83 |                            ParamStreamer<std::variant<Ts...[01;31m[K>>[m[K sv)
+      |                                                            [01;31m[K^~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ is not a member of ‘[01m[Kstd[m[K’
+   83 |                            ParamStreamer<std::[01;31m[Kvariant[m[K<Ts...>> sv)
+      |                                               [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:47:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:57:[m[K [01;31m[Kerror: [m[Kexpected parameter pack before ‘[01m[K...[m[K’
+   83 |                            ParamStreamer<std::variant<Ts[01;31m[K...[m[K>> sv)
+      |                                                         [01;31m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:60:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   83 |                            ParamStreamer<std::variant<Ts...[01;31m[K>>[m[K sv)
+      |                                                            [01;31m[K^~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:28:[m[K [01;31m[Kerror: [m[K‘[01m[KParamStreamer[m[K’ is not a type
+   83 |                            [01;31m[KParamStreamer[m[K<std::variant<Ts...>> sv)
+      |                            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:83:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   83 |                            ParamStreamer[01;31m[K<[m[Kstd::variant<Ts...>> sv)
+      |                                         [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K In function ‘[01m[Kstd::ostream& sdf::v9::operator<<(std::ostream&, int)[m[K’:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:85:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisit[m[K’ is not a member of ‘[01m[Kstd[m[K’
+   85 |     std::[01;31m[Kvisit[m[K([&os](auto const &v)
+      |          [01;31m[K^~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:85:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::visit[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:85:22:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kauto[m[K’ in lambda parameter declaration only available with ‘[01m[K-std=c++14[m[K’ or ‘[01m[K-std=gnu++14[m[K’
+   85 |     std::visit([&os]([01;31m[Kauto[m[K const &v)
+      |                      [01;31m[K^~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K In lambda function:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:87:28:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K{[m[K’ token
+   87 |         os << ParamStreamer[01;31m[K{[m[Kv};
+      |                            [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K In function ‘[01m[Kstd::ostream& sdf::v9::operator<<(std::ostream&, int)[m[K’:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:88:10:[m[K [01;31m[Kerror: [m[K‘[01m[Ksv[m[K’ was not declared in this scope
+   88 |       }, [01;31m[Ksv[m[K.val);
+      |          [01;31m[K^~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K At global scope:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:173:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::any[m[K’ has not been declared
+  173 |     public: bool GetAny(std::[01;31m[Kany[m[K &_anyVal) const;
+      |                              [01;31m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:242:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kany[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  242 |     public: std::function<std::[01;31m[Kany[m[K ()> updateFunc;
+      |                                [01;31m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:242:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::any[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:242:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kany[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:242:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::any[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:242:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  242 |     public: std::function<std::any ()[01;31m[K>[m[K updateFunc;
+      |                                      [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:246:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariant[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+  246 |     public: typedef std::[01;31m[Kvariant[m[K<bool, char, std::string, int, std::uint64_t,
+      |                          [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:246:21:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::variant[m[K’ is only available from C++17 onwards
+  246 |     public: typedef [01;36m[Kstd[m[K::variant<bool, char, std::string, int, std::uint64_t,
+      |                     [01;36m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:257:13:[m[K [01;31m[Kerror: [m[K‘[01m[KParamVariant[m[K’ does not name a type
+  257 |     public: [01;31m[KParamVariant[m[K value;
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:260:13:[m[K [01;31m[Kerror: [m[K‘[01m[KParamVariant[m[K’ does not name a type
+  260 |     public: [01;31m[KParamVariant[m[K defaultValue;
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K In member function ‘[01m[Kbool sdf::v9::Param::Get(T&) const[m[K’:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:298:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass sdf::v9::ParamPrivate[m[K’ has no member named ‘[01m[Kvalue[m[K’
+  298 |         std::string strValue = std::get<std::string>(this->dataPtr->[01;31m[Kvalue[m[K);
+      |                                                                     [01;31m[K^~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:318:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_if[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  318 |         T *value = std::[01;31m[Kget_if[m[K<T>(&this->dataPtr->value);
+      |                         [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:318:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  318 |         T *value = std::get_if<T[01;31m[K>[m[K(&this->dataPtr->value);
+      |                                 [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:318:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass sdf::v9::ParamPrivate[m[K’ has no member named ‘[01m[Kvalue[m[K’
+  318 |         T *value = std::get_if<T>(&this->dataPtr->[01;31m[Kvalue[m[K);
+      |                                                   [01;31m[K^~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:324:30:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K{[m[K’ token
+  324 |           ss << ParamStreamer[01;31m[K{[m[Kthis->dataPtr->value};
+      |                              [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K In member function ‘[01m[Kbool sdf::v9::Param::GetDefault(T&) const[m[K’:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:349:26:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K{[m[K’ token
+  349 |       ss << ParamStreamer[01;31m[K{[m[Kthis->dataPtr->defaultValue};
+      |                          [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:[m[K In member function ‘[01m[Kbool sdf::v9::Param::IsType() const[m[K’:
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:369:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kholds_alternative[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  369 |     return std::[01;31m[Kholds_alternative[m[K<Type>(this->dataPtr->value);
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:369:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  369 |     return std::holds_alternative<Type[01;31m[K>[m[K(this->dataPtr->value);
+      |                                       [01;31m[K^[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Param.hh:369:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass sdf::v9::ParamPrivate[m[K’ has no member named ‘[01m[Kvalue[m[K’
+  369 |     return std::holds_alternative<Type>(this->dataPtr->[01;31m[Kvalue[m[K);
+      |                                                        [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/sdformat-9.2/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.2/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:5[m[K:
+[01m[K/usr/include/sdformat-9.2/sdf/Element.hh:[m[K At global scope:
+[01m[K/usr/include/sdformat-9.2/sdf/Element.hh:237:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kany[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+  237 |     public: std::[01;31m[Kany[m[K GetAny(const std::string &_key = "") const;
+      |                  [01;31m[K^~~[m[K
+[01m[K/usr/include/sdformat-9.2/sdf/Element.hh:237:13:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::any[m[K’ is only available from C++17 onwards
+  237 |     public: [01;36m[Kstd[m[K::any GetAny(const std::string &_key = "") const;
+      |             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:36[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:5[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:62:18:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K,[m[K’ token
+   62 |     SENSOR_PLUGIN[01;31m[K,[m[K
+      |                  [01;31m[K^[m[K
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:[m[K In constructor ‘[01m[Kgazebo::SensorPlugin::SensorPlugin()[m[K’:
+[01m[K/usr/include/gazebo-11/gazebo/common/Plugin.hh:336:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+  336 |              {this->type = SENSOR_PLUGIN[01;31m[K;[m[K}
+      |                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/Entity.hh:35[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/Model.hh:30[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/Actor.hh:27[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:2[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Base.hh:[m[K At global scope:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Base.hh:323:28:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+  323 |       public: virtual std::[01;31m[Koptional[m[K<sdf::SemanticPose> SDFSemanticPose() const;
+      |                            [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Base.hh:323:23:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+  323 |       public: virtual [01;36m[Kstd[m[K::optional<sdf::SemanticPose> SDFSemanticPose() const;
+      |                       [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/Actor.hh:27[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:2[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Model.hh:478:20:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+  478 |       public: std::[01;31m[Koptional[m[K<sdf::SemanticPose> SDFSemanticPose() const override;
+      |                    [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Model.hh:478:15:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+  478 |       public: [01;36m[Kstd[m[K::optional<sdf::SemanticPose> SDFSemanticPose() const override;
+      |               [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/BallJoint.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:6[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Joint.hh:594:28:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+  594 |       public: virtual std::[01;31m[Koptional[m[K<sdf::SemanticPose> SDFSemanticPose()
+      |                            [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Joint.hh:594:23:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+  594 |       public: virtual [01;36m[Kstd[m[K::optional<sdf::SemanticPose> SDFSemanticPose()
+      |                       [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:9[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Collision.hh:205:28:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+  205 |       public: virtual std::[01;31m[Koptional[m[K<sdf::SemanticPose> SDFSemanticPose()
+      |                            [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Collision.hh:205:23:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+  205 |       public: virtual [01;36m[Kstd[m[K::optional<sdf::SemanticPose> SDFSemanticPose()
+      |                       [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:26[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Light.hh:78:20:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+   78 |       public: std::[01;31m[Koptional[m[K<sdf::SemanticPose> SDFSemanticPose() const override;
+      |                    [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Light.hh:78:15:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+   78 |       public: [01;36m[Kstd[m[K::optional<sdf::SemanticPose> SDFSemanticPose() const override;
+      |               [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:28[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Link.hh:617:20:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+  617 |       public: std::[01;31m[Koptional[m[K<sdf::SemanticPose> SDFSemanticPose() const override;
+      |                    [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Link.hh:617:15:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+  617 |       public: [01;36m[Kstd[m[K::optional<sdf::SemanticPose> SDFSemanticPose() const override;
+      |               [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:36[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:6[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:[m[K In static member function ‘[01m[Kstatic T gazebo::physics::PhysicsEngine::any_cast(const boost::any&)[m[K’:
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:274:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kany[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  274 |           auto value = boost::any_cast<std::[01;31m[Kany[m[K>(_value);
+      |                                             [01;31m[K^~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:274:45:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::any[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:274:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kany[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:274:45:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::any[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:275:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kany_cast[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  275 |           return std::[01;31m[Kany_cast[m[K<T>(value);
+      |                       [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:275:23:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::any_cast[m[K’ is only available from C++17 onwards
+[01m[K/usr/include/gazebo-11/gazebo/physics/PhysicsEngine.hh:275:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  275 |           return std::any_cast<T[01;31m[K>[m[K(value);
+      |                                 [01;31m[K^[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::mySensorPlugin::Load(gazebo::sensors::SensorPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:49:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::World[m[K’ has no member named ‘[01m[KGetModel[m[K’
+   49 |        physics::ModelPtr _m = _w->[01;31m[KGetModel[m[K(modelName.c_str());
+      |                                   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::mySensorPlugin::OnNewLaserScans()[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:57:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::Link[m[K’ has no member named ‘[01m[KGetRelativePose[m[K’; did you mean ‘[01m[KSetRelativePose[m[K’?
+   57 |       double yaw = _sensor->Pose().Rot().Yaw() + _l->[01;31m[KGetRelativePose[m[K().rot.GetYaw();
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[KSetRelativePose[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:13[m[K:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:59:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kout[m[K’ was not declared in this scope
+   59 |       ROS_INFO("[%f] %s", yaw, [01;31m[Kout[m[K.c_str());
+      |                                [01;31m[K^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:59:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   59 |       [01;36m[KROS_INFO[m[K("[%f] %s", yaw, out.c_str());
+      |       [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/sensor_plugin.dir/build.make:63: CMakeFiles/sensor_plugin.dir/plugins/sensor_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:209: CMakeFiles/sensor_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

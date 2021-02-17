@@ -1,0 +1,19 @@
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::MySensorPlugin::Load(gazebo::sensors::SensorPtr, sdf::v9::ElementPtr)[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:49:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gazebo::physics::World[m[K’ has no member named ‘[01m[KGetModel[m[K’
+   49 |        physics::ModelPtr _m = _w->[01;31m[KGetModel[m[K(modelName.c_str());
+      |                                   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:[m[K In member function ‘[01m[Kvirtual void gazebo::MySensorPlugin::OnNewLaserScans()[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:59:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgazebo::physics::Link::SetRelativePose()[m[K’
+   59 |      double yaw = _sensor->Pose().Rot().Yaw() + _l->SetRelativePose([01;31m[K)[m[K.rot.GetYaw();
+      |                                                                     [01;31m[K^[m[K
+In file included from [01m[K/usr/include/gazebo-11/gazebo/physics/Model.hh:30[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/Actor.hh:27[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/physics/physics.hh:2[m[K,
+                 from [01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc:7[m[K:
+[01m[K/usr/include/gazebo-11/gazebo/physics/Entity.hh:115:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid gazebo::physics::Entity::SetRelativePose(const Pose3d&, bool, bool)[m[K’
+  115 |       public: void [01;36m[KSetRelativePose[m[K(const ignition::math::Pose3d &_pose,
+      |                    [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/gazebo-11/gazebo/physics/Entity.hh:115:20:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+make[2]: *** [CMakeFiles/mysensor_plugin.dir/build.make:63: CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/mysensor_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
