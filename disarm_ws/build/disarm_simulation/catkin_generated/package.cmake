@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "disarm_simulation")
 set(disarm_simulation_VERSION "0.0.0")
-set(disarm_simulation_MAINTAINER "matt <matt@todo.todo>")
+set(disarm_simulation_MAINTAINER "matt <mintriago2017@my.fit.edu>")
 set(disarm_simulation_PACKAGE_FORMAT "2")
 set(disarm_simulation_BUILD_DEPENDS "roscpp" "gazebo_ros" "sensor_msgs" "std_msgs")
 set(disarm_simulation_BUILD_EXPORT_DEPENDS "roscpp" "gazebo_ros" "sensor_msgs" "std_msgs")

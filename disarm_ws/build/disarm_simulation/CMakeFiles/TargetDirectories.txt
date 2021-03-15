@@ -2,6 +2,7 @@
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/list_install_components.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/rebuild_cache.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/test.dir
+/home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/chaser_mover_plugin.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/install/strip.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/mysensor_plugin.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/disarm_plugin.dir
@@ -65,7 +66,6 @@
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/tf_generate_messages_nodejs.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
-/home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/plannar_mover_plugin.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/sensor_msgs_generate_messages_eus.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
 /home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles/edit_cache.dir

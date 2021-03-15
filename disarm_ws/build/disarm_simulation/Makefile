@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named chaser_mover_plugin
+
+# Build rule for target.
+chaser_mover_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chaser_mover_plugin
+.PHONY : chaser_mover_plugin
+
+# fast build rule for target.
+chaser_mover_plugin/fast:
+	$(MAKE) -f CMakeFiles/chaser_mover_plugin.dir/build.make CMakeFiles/chaser_mover_plugin.dir/build
+.PHONY : chaser_mover_plugin/fast
+
+#=============================================================================
 # Target rules for targets named mysensor_plugin
 
 # Build rule for target.
@@ -961,19 +974,6 @@ sensor_msgs_generate_messages_cpp/fast:
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named plannar_mover_plugin
-
-# Build rule for target.
-plannar_mover_plugin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plannar_mover_plugin
-.PHONY : plannar_mover_plugin
-
-# fast build rule for target.
-plannar_mover_plugin/fast:
-	$(MAKE) -f CMakeFiles/plannar_mover_plugin.dir/build.make CMakeFiles/plannar_mover_plugin.dir/build
-.PHONY : plannar_mover_plugin/fast
-
-#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1272,6 +1272,33 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+plugins/chaser_mover.o: plugins/chaser_mover.cc.o
+
+.PHONY : plugins/chaser_mover.o
+
+# target to build an object file
+plugins/chaser_mover.cc.o:
+	$(MAKE) -f CMakeFiles/chaser_mover_plugin.dir/build.make CMakeFiles/chaser_mover_plugin.dir/plugins/chaser_mover.cc.o
+.PHONY : plugins/chaser_mover.cc.o
+
+plugins/chaser_mover.i: plugins/chaser_mover.cc.i
+
+.PHONY : plugins/chaser_mover.i
+
+# target to preprocess a source file
+plugins/chaser_mover.cc.i:
+	$(MAKE) -f CMakeFiles/chaser_mover_plugin.dir/build.make CMakeFiles/chaser_mover_plugin.dir/plugins/chaser_mover.cc.i
+.PHONY : plugins/chaser_mover.cc.i
+
+plugins/chaser_mover.s: plugins/chaser_mover.cc.s
+
+.PHONY : plugins/chaser_mover.s
+
+# target to generate assembly for a file
+plugins/chaser_mover.cc.s:
+	$(MAKE) -f CMakeFiles/chaser_mover_plugin.dir/build.make CMakeFiles/chaser_mover_plugin.dir/plugins/chaser_mover.cc.s
+.PHONY : plugins/chaser_mover.cc.s
+
 plugins/disarm_plugin.o: plugins/disarm_plugin.cc.o
 
 .PHONY : plugins/disarm_plugin.o
@@ -1326,33 +1353,6 @@ plugins/mysensor_plugin.cc.s:
 	$(MAKE) -f CMakeFiles/mysensor_plugin.dir/build.make CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.s
 .PHONY : plugins/mysensor_plugin.cc.s
 
-plugins/plannar_mover.o: plugins/plannar_mover.cc.o
-
-.PHONY : plugins/plannar_mover.o
-
-# target to build an object file
-plugins/plannar_mover.cc.o:
-	$(MAKE) -f CMakeFiles/plannar_mover_plugin.dir/build.make CMakeFiles/plannar_mover_plugin.dir/plugins/plannar_mover.cc.o
-.PHONY : plugins/plannar_mover.cc.o
-
-plugins/plannar_mover.i: plugins/plannar_mover.cc.i
-
-.PHONY : plugins/plannar_mover.i
-
-# target to preprocess a source file
-plugins/plannar_mover.cc.i:
-	$(MAKE) -f CMakeFiles/plannar_mover_plugin.dir/build.make CMakeFiles/plannar_mover_plugin.dir/plugins/plannar_mover.cc.i
-.PHONY : plugins/plannar_mover.cc.i
-
-plugins/plannar_mover.s: plugins/plannar_mover.cc.s
-
-.PHONY : plugins/plannar_mover.s
-
-# target to generate assembly for a file
-plugins/plannar_mover.cc.s:
-	$(MAKE) -f CMakeFiles/plannar_mover_plugin.dir/build.make CMakeFiles/plannar_mover_plugin.dir/plugins/plannar_mover.cc.s
-.PHONY : plugins/plannar_mover.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1363,6 +1363,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... chaser_mover_plugin"
 	@echo "... install/strip"
 	@echo "... mysensor_plugin"
 	@echo "... disarm_plugin"
@@ -1426,7 +1427,6 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... plannar_mover_plugin"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... edit_cache"
@@ -1451,15 +1451,15 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... plugins/chaser_mover.o"
+	@echo "... plugins/chaser_mover.i"
+	@echo "... plugins/chaser_mover.s"
 	@echo "... plugins/disarm_plugin.o"
 	@echo "... plugins/disarm_plugin.i"
 	@echo "... plugins/disarm_plugin.s"
 	@echo "... plugins/mysensor_plugin.o"
 	@echo "... plugins/mysensor_plugin.i"
 	@echo "... plugins/mysensor_plugin.s"
-	@echo "... plugins/plannar_mover.o"
-	@echo "... plugins/plannar_mover.i"
-	@echo "... plugins/plannar_mover.s"
 .PHONY : help
 
 

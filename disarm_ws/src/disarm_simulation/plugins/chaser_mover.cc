@@ -14,9 +14,9 @@
 
 namespace gazebo
 {
-  class PlannarMover : public ModelPlugin
+  class ChaserMover : public ModelPlugin
   {
-    public: void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
+    public: void Load(physics::ModelPtr _parent, sdf::ElementPtr)
     {
       // Store the pointer to the model
       this->model = _parent;
@@ -24,40 +24,40 @@ namespace gazebo
       // Listen to the update event. This event is broadcast every
       // simulation iteration.
       this->updateConnection = event::Events::ConnectWorldUpdateBegin(
-          std::bind(&PlannarMover::OnUpdate, this));
+          std::bind(&ChaserMover::OnUpdate, this));
       
       this->old_secs =ros::Time::now().toSec();
       
       // Create a topic name
-      std::string plannar_pos_topicName = "/cmd_vel";
+      std::string Chaser_pos_topicName = "/cmd_vel";
 
       // Initialize ros, if it has not already bee initialized.
       if (!ros::isInitialized())
       {
         int argc = 0;
         char **argv = NULL;
-        ros::init(argc, argv, "plannar_rosnode",
+        ros::init(argc, argv, "chaser_rosnode",
             ros::init_options::NoSigintHandler);
       }
          
       // Create our ROS node. This acts in a similar manner to
       // the Gazebo node
-      this->rosNode.reset(new ros::NodeHandle("plannar_rosnode"));
+      this->rosNode.reset(new ros::NodeHandle("chaser_rosnode"));
       
-      // Plannar Pose
+      // Chaser Pose
       ros::SubscribeOptions so =
         ros::SubscribeOptions::create<geometry_msgs::Twist>(
-            plannar_pos_topicName,
+            Chaser_pos_topicName,
             1,
-            boost::bind(&PlannarMover::OnRosMsg_Pos, this, _1),
+            boost::bind(&ChaserMover::OnRosMsg_Pos, this, _1),
             ros::VoidPtr(), &this->rosQueue);
       this->rosSub = this->rosNode->subscribe(so);
       
       // Spin up the queue helper thread.
       this->rosQueueThread =
-        std::thread(std::bind(&PlannarMover::QueueThread, this));
+        std::thread(std::bind(&ChaserMover::QueueThread, this));
 
-      ROS_WARN("Loaded PlannarMover Plugin with parent...%s", this->model->GetName().c_str());
+      ROS_WARN("Loaded ChaserMover Plugin with parent...%s", this->model->GetName().c_str());
       
     }
 
@@ -135,5 +135,5 @@ namespace gazebo
   };
 
 
-  GZ_REGISTER_MODEL_PLUGIN(PlannarMover)
+  GZ_REGISTER_MODEL_PLUGIN(ChaserMover)
 }

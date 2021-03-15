@@ -147,8 +147,8 @@ target_link_libraries(disarm_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${ro
 add_library(mysensor_plugin plugins/mysensor_plugin.cc)
 target_link_libraries(mysensor_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 
-add_library(plannar_mover_plugin plugins/plannar_mover.cc)
-target_link_libraries(plannar_mover_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+add_library(chaser_mover_plugin plugins/chaser_mover.cc)
+target_link_libraries(chaser_mover_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
