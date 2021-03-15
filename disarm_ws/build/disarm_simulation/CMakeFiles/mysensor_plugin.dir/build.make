@@ -57,37 +57,51 @@ include CMakeFiles/mysensor_plugin.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mysensor_plugin.dir/flags.make
 
-CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o: CMakeFiles/mysensor_plugin.dir/flags.make
-CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o: /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o -c /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc
+CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.o: CMakeFiles/mysensor_plugin.dir/flags.make
+CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.o: /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/mysensor_plugin.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matt/disarm/disarm_ws/build/disarm_simulation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.o -c /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/mysensor_plugin.cc
 
-CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc > CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.i
+CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/mysensor_plugin.cc > CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.i
 
-CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/sensor_plugin.cc -o CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.s
+CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/mysensor_plugin.cc -o CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.s
 
 # Object files for target mysensor_plugin
 mysensor_plugin_OBJECTS = \
-"CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o"
+"CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.o"
 
 # External object files for target mysensor_plugin
 mysensor_plugin_EXTERNAL_OBJECTS =
 
-/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: CMakeFiles/mysensor_plugin.dir/plugins/mysensor_plugin.cc.o
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: CMakeFiles/mysensor_plugin.dir/build.make
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libgazebo_ros_api_plugin.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libgazebo_ros_paths_plugin.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libtf.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libcontroller_manager.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librobot_state_publisher_solver.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libjoint_state_listener.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libkdl_parser.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/liburdf.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/liburdfdom_model.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/liburdfdom_world.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libclass_loader.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libPocoFoundation.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libdl.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libroslib.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librospack.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libtf.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librosconsole_bridge.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libtf2_ros.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libactionlib.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libmessage_filters.so
@@ -95,14 +109,13 @@ mysensor_plugin_EXTERNAL_OBJECTS =
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libtf2.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librosconsole.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libtf2.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/librostime.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
@@ -110,6 +123,7 @@ mysensor_plugin_EXTERNAL_OBJECTS =
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/liborocos-kdl.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so.3.6
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libdart.so.6.9.2
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
@@ -159,7 +173,7 @@ mysensor_plugin_EXTERNAL_OBJECTS =
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libtf2.so
-/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/liborocos-kdl.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
 /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so

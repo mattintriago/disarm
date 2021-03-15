@@ -86,15 +86,15 @@
     </collision>
   </link>
   <joint
-    name="TopPlate"
+    name="TopFixedPlate"
     type="fixed">
     <origin
-      xyz="0 0 0.27734"
+      xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="Base" />
+      link="InnerGuidingRods" />
     <child
-      link="TopPlate" />
+      link="TopPlate"/>
     <axis
       xyz="0 0 0" />
   </joint>
@@ -140,7 +140,7 @@
     </collision>
   </link>
   <joint
-    name="LeadScrew"
+    name="LeadScrewJoint"
     type="fixed">
     <origin
       xyz="0 0 0.17416"
@@ -154,7 +154,7 @@
   </joint>
   
   <link
-    name="Actuators">
+    name="Prongs">
     <inertial>
       <origin
         xyz="0.0432711387853683 0.0296455278870579 0.02812803901053"
@@ -194,21 +194,21 @@
     </collision>
   </link>
   <joint
-    name="Actuators"
+    name="ProngJoint"
     type="fixed">
     <origin
-      xyz="-0.04053 -0.033295 0.27734"
+      xyz="-0.04053 -0.033295 0"
       rpy="0 0 0.087041" />
     <parent
-      link="Base" />
+      link="TopPlate" />
     <child
-      link="Actuators" />
+      link="Prongs" />
     <axis
       xyz="0 0 0" />
   </joint>
   
   <link
-    name="Sensors">
+    name="InnerGuidingRods">
     <inertial>
       <origin
         xyz="0 0 -0.07665443435274"
@@ -248,18 +248,31 @@
     </collision>
   </link>
   <joint
-    name="Sensors"
-    type="fixed">
+    name="innerGRJoint"
+    type="prismatic">
     <origin
       xyz="0 0 0.27734"
       rpy="0 0 0" />
     <parent
       link="Base" />
     <child
-      link="Sensors" />
+      link="InnerGuidingRods"/>
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
+      <limit lower ="-0.1" upper="0" effort="1000" velocity = "0.2"/>
+      <friction>0.05</friction>
   </joint>
+  
+   <transmission name="lift_transmission">
+   	<type>transmission_interface/SimpleTransmission</type>
+   	<joint name="innerGRJoint">
+   		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   	</joint>  
+   	<actuator name="lift_motor">
+      		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      		<mechanicalReduction>1</mechanicalReduction>
+    	</actuator>
+    </transmission>
   
   <link
     name="GuidingRods">
@@ -302,15 +315,15 @@
     </collision>
   </link>
   <joint
-    name="GuidingRods"
-    type="fixed">
+    name="GuidingRodsJoint"
+    type="fixed">     
     <origin
       xyz="0.17102 0.1465 0"
       rpy="0 0 0" />
     <parent
       link="Base" />
     <child
-      link="GuidingRods" />
+      link="GuidingRods"/>
     <axis
       xyz="0 0 0" />
   </joint>
@@ -356,17 +369,20 @@
     </collision>
   </link>
   <joint
-    name="Spring"
-    type="fixed">
+    name="SpringJoint"
+    type="prismatic">
     <origin
-      xyz="0 0 0.17416"
+      xyz="0 0 -0.105"
       rpy="0 0 1.6634" />
     <parent
-      link="Base" />
+      link="TopPlate" />
     <child
       link="Spring" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
+      <limit lower ="0" upper="0" effort="1000" velocity = "0.2"/>
+      <dynamics spring_stiffness="2500" spring_reference="0.06" damping="20.0"/>
+      
   </joint>
   
   <link
@@ -410,13 +426,13 @@
     </collision>
   </link>
   <joint
-    name="OuterShaft"
+    name="OuterShaftJoint"
     type="fixed">
     <origin
-      xyz="0 0 0.174160571111755"
+      xyz="0 0 -0.105"
       rpy="0 0 1.66344608700645" />
     <parent
-      link="Base" />
+      link="TopPlate" />
     <child
       link="OuterShaft" />
     <axis
@@ -424,7 +440,7 @@
   </joint>
   
   <joint name="lidarGlue" type="fixed">
-    <parent link="Sensors"/>
+    <parent link="TopPlate"/>
     <child link="laz_base"/>
     <origin 
     xyz="0.065 0 0"
@@ -439,10 +455,8 @@
     rpy="0 0 0" />
   </joint>
   
-   <gazebo>
+  <gazebo>
   	<plugin name="disarm_plugin" filename="libdisarm_plugin.so"> </plugin>
-  	<plugin name="mysensor_plugin" filename="libmysensor_plugin.so"> 
-  	</plugin>
   </gazebo>
   
  

@@ -1,0 +1,14 @@
+[35m[1mScanning dependencies of target disarm_plugin[0m
+[  0%] Built target disarm_simulation_xacro_generated_to_devel_space_
+[ 50%] Built target mysensor_plugin
+[ 75%] [32mBuilding CXX object CMakeFiles/disarm_plugin.dir/plugins/disarm_plugin.cc.o[0m
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/disarm_plugin.cc:33:48:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KonUpdate[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+   33 |  virtual onUpdate(const common::UpdateInfo &inf[01;31m[K)[m[K
+      |                                                [01;31m[K^[m[K
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/disarm_plugin.cc:[m[K In member function ‘[01m[Kvirtual int gazebo::DisarmPlugin::onUpdate(const gazebo::common::UpdateInfo&)[m[K’:
+[01m[K/home/matt/disarm/disarm_ws/src/disarm_simulation/plugins/disarm_plugin.cc:37:2:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   37 |  [01;35m[K}[m[K
+      |  [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/disarm_plugin.dir/build.make:63: CMakeFiles/disarm_plugin.dir/plugins/disarm_plugin.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:238: CMakeFiles/disarm_plugin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

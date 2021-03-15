@@ -1,6 +1,0 @@
-[35m[1mScanning dependencies of target mysensor_plugin[0m
-[  0%] Built target disarm_simulation_xacro_generated_to_devel_space_
-[ 50%] Built target disarm_plugin
-[ 75%] [32mBuilding CXX object CMakeFiles/mysensor_plugin.dir/plugins/sensor_plugin.cc.o[0m
-[100%] [32m[1mLinking CXX shared library /home/matt/disarm/disarm_ws/devel/.private/disarm_simulation/lib/libmysensor_plugin.so[0m
-[100%] Built target mysensor_plugin

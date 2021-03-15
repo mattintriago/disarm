@@ -34,7 +34,6 @@
     <material>Gazebo/Grey</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-
     <sensor type="ray" name="laz">
        <always_on>true</always_on>
        <pose>${laz_radius} 0 ${laz_height/4} ${pi/2} 0 0</pose>
@@ -49,7 +48,7 @@
 
          <scan>
            <horizontal>
-             <samples>40</samples>
+             <samples>720</samples>
              <resolution>0.25</resolution>
              <min_angle>-${pi/8}</min_angle>
              <max_angle>${pi/8}</max_angle>
@@ -67,9 +66,6 @@
            <resolution>0.02</resolution>
          </range>
       </ray>
-
-     <plugin name="mysensor_plugin" filename="libmysensor_plugin.so"> </plugin>
-     
    </sensor>
   </gazebo>
 
@@ -99,6 +95,11 @@
     <origin xyz = "0 0 ${base_height/2}"/>
     <dynamics friction="0.1"/>
   </joint>
+  
+  <gazebo>
+       <plugin name="mysensor_plugin" filename="libmysensor_plugin.so"> </plugin>
+  </gazebo>
+  
 </robot>
   
   

@@ -29,13 +29,12 @@ namespace gazebo
  	public:
  	
  	DisarmPlugin() {}
- 	/*
-	virtual onUpdate(const common::UpdateInfo &inf) 
-	{
+ 	
+	void onUpdate(const common::UpdateInfo &inf) {
 	
-		_m->GetJoint("GuidingRods")->SetForce(0,5); 	
+		//_m->GetJoint("innerGRJoint")->SetForce(0,5); 
+			
 	}
-	*/
  	
  	virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf) 
  		{
@@ -48,7 +47,7 @@ namespace gazebo
 		 	
 		 	_m = _model;
 		 	
-		 	//this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&DisarmPlugin::onUpdate, this, _1));
+		 	this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&DisarmPlugin::onUpdate, this, _1));
 	 	}
 	};
 	

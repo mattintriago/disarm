@@ -1,0 +1,879 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>4.17295 -5.21751 3.34117 0 0.409447 2.19333</pose>
+        <view_controller>ortho</view_controller>
+        <projection_type>orthographic</projection_type>
+      </camera>
+    </gui>
+    <gravity>0 0 0</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='disarm'>
+      <link name='Base'>
+        <inertial>
+          <pose>0.004651 0.013816 0.029541 0 -0 0</pose>
+          <mass>1.39742</mass>
+          <inertia>
+            <ixx>0.0194041</ixx>
+            <ixy>8.97998e-05</ixy>
+            <ixz>-0.00161069</ixz>
+            <iyy>0.0249227</iyy>
+            <iyz>0.000569701</iyz>
+            <izz>0.00647952</izz>
+          </inertia>
+        </inertial>
+        <collision name='Base_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Base.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__Actuators_collision_1'>
+          <pose>-0.04053 -0.033295 0.27734 0 -0 0.087041</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Actuators.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__GuidingRods_collision_2'>
+          <pose>0.17102 0.1465 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/GuidingRods.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__LeadScrew_collision_3'>
+          <pose>0 0 0.17416 3.14159 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/LeadScrew.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__OuterShaft_collision_4'>
+          <pose>0 0 0.174161 0 -0 1.66345</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/OuterShaft.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__Sensors_collision_5'>
+          <pose>0 0 0.27734 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Sensors.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__laz_base_collision_6'>
+          <pose>0.065 0 0.27734 0 -1.55 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.02 0.01</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__Spring_collision_7'>
+          <pose>0 0 0.17416 0 -0 1.6634</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Spring.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='Base_fixed_joint_lump__chaser_body_collision_8'>
+          <pose>0 0 -0.065 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.35 0.35 0.125</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Base_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Base.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__Actuators_visual_1'>
+          <pose>-0.04053 -0.033295 0.27734 0 -0 0.087041</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Actuators.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__GuidingRods_visual_2'>
+          <pose>0.17102 0.1465 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/GuidingRods.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__LeadScrew_visual_3'>
+          <pose>0 0 0.17416 3.14159 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/LeadScrew.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__OuterShaft_visual_4'>
+          <pose>0 0 0.174161 0 -0 1.66345</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/OuterShaft.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__Sensors_visual_5'>
+          <pose>0 0 0.27734 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Sensors.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__laz_base_visual_6'>
+          <pose>0.065 0 0.27734 0 -1.55 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.02 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='Base_fixed_joint_lump__Spring_visual_7'>
+          <pose>0 0 0.17416 0 -0 1.6634</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/Spring.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Base_fixed_joint_lump__chaser_body_visual_8'>
+          <pose>0 0 -0.065 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.35 0.35 0.125</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='lazRot' type='revolute'>
+        <pose relative_to='Base'>0.062501 0 0.277392 0 -1.55 0</pose>
+        <parent>Base</parent>
+        <child>laz_rot</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <damping>0</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='laz_rot'>
+        <pose relative_to='lazRot'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>3.33333e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.33333e-06</iyy>
+            <iyz>0</iyz>
+            <izz>5e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='laz_rot_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.02 0.01</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='laz_rot_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.01 0.02 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <sensor name='laz' type='ray'>
+          <always_on>1</always_on>
+          <pose>0.01 0 0.0025 1.5708 -0 0</pose>
+          <visualize>1</visualize>
+          <update_rate>30</update_rate>
+          <ray>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+            <scan>
+              <horizontal>
+                <samples>720</samples>
+                <resolution>0.25</resolution>
+                <min_angle>-0.392699</min_angle>
+                <max_angle>0.392699</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <resolution>1</resolution>
+                <min_angle>-0.15</min_angle>
+                <max_angle>0.15</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.05</min>
+              <max>15</max>
+              <resolution>0.02</resolution>
+            </range>
+          </ray>
+          <plugin name='mysensor_plugin' filename='libmysensor_plugin.so'>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='TopContinuousPlate' type='revolute'>
+        <pose relative_to='Base'>0 0 0.27734 0 -0 0</pose>
+        <parent>Base</parent>
+        <child>TopPlate</child>
+        <axis>
+          <xyz>0 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='TopPlate'>
+        <pose relative_to='TopContinuousPlate'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 -0 -0.00635 0 -0 0</pose>
+          <mass>0.49957</mass>
+          <inertia>
+            <ixx>0.00169479</ixx>
+            <ixy>4.98728e-06</ixy>
+            <ixz>2.59648e-36</ixz>
+            <iyy>0.00169479</iyy>
+            <iyz>-3.78622e-21</iyz>
+            <izz>0.00337615</izz>
+          </inertia>
+        </inertial>
+        <collision name='TopPlate_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/TopPlate.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='TopPlate_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/matt/disarm/disarm_ws/src/disarm_simulation/meshes/TopPlate.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>0</static>
+      <plugin name='disarm_plugin' filename='libdisarm_plugin.so'>
+        <robotNamespace>/</robotNamespace>
+      </plugin>
+      <plugin name='mysensor_plugin' filename='libmysensor_plugin.so'>
+        <robotNamespace>/</robotNamespace>
+      </plugin>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <model name='cubesat1U'>
+      <link name='cubesat1U'>
+        <inertial>
+          <pose>0 -0.05 0 0 -0 0</pose>
+          <mass>0.79077</mass>
+          <inertia>
+            <ixx>0.0011919</ixx>
+            <ixy>1.4344e-19</ixy>
+            <ixz>-7.6799e-20</ixz>
+            <iyy>0.0011107</iyy>
+            <iyz>-9.62757e-20</iyz>
+            <izz>0.001254</izz>
+          </inertia>
+        </inertial>
+        <collision name='cubesat1U_collision'>
+          <pose>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://cubesat1U/meshes/cubesat1U.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='cubesat1U_visual'>
+          <pose>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://cubesat1U/meshes/cubesat1U.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.769251 0.526266 0 0 -0 0</pose>
+    </model>
+    <model name='cubesat1U_0'>
+      <link name='cubesat1U'>
+        <inertial>
+          <pose>0 -0.05 0 0 -0 0</pose>
+          <mass>0.79077</mass>
+          <inertia>
+            <ixx>0.0011919</ixx>
+            <ixy>1.4344e-19</ixy>
+            <ixz>-7.6799e-20</ixz>
+            <iyy>0.0011107</iyy>
+            <iyz>-9.62757e-20</iyz>
+            <izz>0.001254</izz>
+          </inertia>
+        </inertial>
+        <collision name='cubesat1U_collision'>
+          <pose>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://cubesat1U/meshes/cubesat1U.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='cubesat1U_visual'>
+          <pose>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://cubesat1U/meshes/cubesat1U.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.794691 0.278193 0 0 -0 0</pose>
+    </model>
+    <model name='cubesat1U_1'>
+      <link name='cubesat1U'>
+        <inertial>
+          <pose>0 -0.05 0 0 -0 0</pose>
+          <mass>0.79077</mass>
+          <inertia>
+            <ixx>0.0011919</ixx>
+            <ixy>1.4344e-19</ixy>
+            <ixz>-7.6799e-20</ixz>
+            <iyy>0.0011107</iyy>
+            <iyz>-9.62757e-20</iyz>
+            <izz>0.001254</izz>
+          </inertia>
+        </inertial>
+        <collision name='cubesat1U_collision'>
+          <pose>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://cubesat1U/meshes/cubesat1U.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='cubesat1U_visual'>
+          <pose>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://cubesat1U/meshes/cubesat1U.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.614964 0.299861 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>2 597000000</sim_time>
+      <real_time>8 363259779</real_time>
+      <wall_time>1613712445 220612941</wall_time>
+      <iterations>2597</iterations>
+      <model name='cubesat1U'>
+        <pose>0.769251 0.119277 0.590196 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='cubesat1U'>
+          <pose>0.769251 0.119277 0.590196 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cubesat1U_0'>
+        <pose>0.794691 0.516659 0.73998 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='cubesat1U'>
+          <pose>0.794691 0.516659 0.73998 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cubesat1U_1'>
+        <pose>0.614964 0.299861 0.536103 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='cubesat1U'>
+          <pose>0.614964 0.299861 0.536103 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='disarm'>
+        <pose>0.000527 0.01373 0.666533 -2.58852 1.53355 -2.59448</pose>
+        <scale>1 1 1</scale>
+        <link name='Base'>
+          <pose>0.000527 0.01373 0.666533 -2.58852 1.53355 -2.59448</pose>
+          <velocity>0.000926 0.00145 -0.00695 -0.008003 0.00561 -0.004922</velocity>
+          <acceleration>-2e-06 -1e-06 -9.79999 -9.7e-05 -1.3e-05 7.4e-05</acceleration>
+          <wrench>-2e-06 -1e-06 -13.6947 0 -0 0</wrench>
+        </link>
+        <link name='TopPlate'>
+          <pose>0.277722 0.011992 0.657745 -2.55717 1.53355 -2.59448</pose>
+          <velocity>0.00227 0.003345 -0.007163 0.016766 0.00547 -0.004923</velocity>
+          <acceleration>4e-06 1e-06 -9.80002 1.3e-05 -9.3e-05 -4.8e-05</acceleration>
+          <wrench>2e-06 0 -4.89579 0 -0 0</wrench>
+        </link>
+        <link name='laz_rot'>
+          <pose>0.275787 0.010781 0.595286 -0.019588 0.052483 -0.006669</pose>
+          <velocity>0.002306 0.002959 -0.007473 -0.008003 0.00561 -0.004922</velocity>
+          <acceleration>1e-06 5e-06 -9.80001 -5e-06 -1.8e-05 8e-05</acceleration>
+          <wrench>0 0 -0.980001 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+      <light name='user_directional_light_0'>
+        <pose>0.690088 0.146718 1 0 -0 0</pose>
+      </light>
+      <light name='user_spot_light_0'>
+        <pose>-1.35919 -0.02782 1.69096 0 -0.876361 0</pose>
+      </light>
+      <light name='user_spot_light_1'>
+        <pose>0.09516 -0.367827 1.31086 0.485536 -0 0</pose>
+      </light>
+    </state>
+    <light name='user_spot_light_0' type='spot'>
+      <pose>-0.012002 -0.02782 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0 0 -1</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <spot>
+        <inner_angle>0.6</inner_angle>
+        <outer_angle>1</outer_angle>
+        <falloff>1</falloff>
+      </spot>
+    </light>
+    <light name='user_directional_light_0' type='directional'>
+      <pose>0.690088 0.146718 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
+    <light name='user_spot_light_1' type='spot'>
+      <pose>0.09516 -0.110303 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0 0 -1</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <spot>
+        <inner_angle>0.6</inner_angle>
+        <outer_angle>1</outer_angle>
+        <falloff>1</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

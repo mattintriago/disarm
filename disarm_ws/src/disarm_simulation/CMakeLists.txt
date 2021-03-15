@@ -12,6 +12,9 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   sensor_msgs
   xacro
+  controller_manager
+  joint_state_publisher
+  robot_state_publisher
 )
 find_package(gazebo REQUIRED)
 
@@ -141,8 +144,11 @@ include_directories(
 add_library(disarm_plugin plugins/disarm_plugin.cc)
 target_link_libraries(disarm_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 
-add_library(mysensor_plugin plugins/sensor_plugin.cc)
+add_library(mysensor_plugin plugins/mysensor_plugin.cc)
 target_link_libraries(mysensor_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
+
+add_library(plannar_mover_plugin plugins/plannar_mover.cc)
+target_link_libraries(plannar_mover_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries

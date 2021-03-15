@@ -1,0 +1,15 @@
+[31m[1mCMake Error[0m at /home/matt/disarm/disarm_ws/src/disarm_simulation/CMakeLists.txt:150 (add_library):
+  Cannot find source file:
+
+    src/plannar_mover.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+[31m[1mCMake Error[0m at /home/matt/disarm/disarm_ws/src/disarm_simulation/CMakeLists.txt:150 (add_library):
+  No SOURCES given to target: plannar_mover_plugin
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+make: *** [Makefile:1360: cmake_check_build_system] Error 1
